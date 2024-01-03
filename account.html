@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book_store | Ecommerce website Design</title>
+    <link rel="stylesheet" href="account.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<!-- ---------------------- Account page---------------------- -->
+<div class="account-page">
+
+    <div class="container">
+        <h1 class="centered-title">AcerAce</h1>
+        <div class="row">
+            <div class="col-2">
+                <img src="./src/image/test.png" alt="" width="80%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()"> Login</span>
+                        <span onclick="register()"> Register </span>
+                        <hr id="Indicator">
+                    </div>
+                    <form class="login_form" action="" id="LoginForm" name="myform" onsubmit="return validateform()"
+                        method="post">
+                        <input type="text" id="" placeholder="Username" name="username">
+                        <input type="password" id="" placeholder="password" name="password">
+                        <!-- <button type="submit" class="btn">Login</button> -->
+                        <input type="submit" value="login" class="btn">
+                        <!-- <a href="">Forget password</a> -->
+                    </form>
+                    <form action="" id="RegForm" method="post">
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <input type="text" name="address" id="address" placeholder="Address">
+                        <input type="text" name="mobile" id="mobile" placeholder="Mobile Number">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+
+                </div>
+                <div class="loader" id="loader" style="display: none;"></div> <!-- Loader -->
+
+                <div id="successPopup" class="popup" style="display: none;">
+                    <p>Registration successful!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ---------------------- sift pages  js --------------- -->
+<script>
+    var LoginForm = document.getElementById("LoginForm")
+    var RegForm = document.getElementById("RegForm")
+    var Indicator = document.getElementById("Indicator")
+    function register() {
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+
+
+    }
+    function login() {
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+
+    }
+
+</script>
+<script src="register-login.js"></script>
+</body>
+
+</html>

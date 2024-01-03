@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Our Land Transaction App</title>
+    <link rel="stylesheet" type="text/css" href="home-style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to AcreAce</h1>
+        <p>Revolutionizing Land Transactions with Blockchain Technology</p>
+        <div class="header-line"></div>
+    </header>
+
+    <div class="top-right-controls">
+        <div class="button-container">
+            <button id="add-land" onclick="showPopup('landPopup')">Add Land</button>
+            <!-- <button id="add-user" onclick="showPopup('userPopup')">Add User</button> -->
+            <button id="logout-button" onclick="logout()">Logout</button>
+
+        </div>
+        
+        
+
+        <!-- <div class="dropdown-container">
+            <label for="users">Users:</label>
+            <select id="users" onchange="fetchLandsForSelectedUser()">
+                <option value="">Select a User</option>
+                
+            </select>
+        </div> -->
+    </div>
+
+    <!-- User Popup -->
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('userPopup')">&times;</span>
+            <h2>Add User</h2>
+            <form id="userForm">
+                <input type="text" placeholder="Name" name="name">
+                <input type="text" placeholder="Address" name="address">
+                <input type="tel" placeholder="Mobile" name="mobile">
+                <input type="email" placeholder="Email" name="email">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Land Popup -->
+    <div id="landPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('landPopup')">&times;</span>
+            <h2>Add Land</h2>
+            <form id="landForm">
+                <input type="text" placeholder="Location" name="location">
+                <input type="number" placeholder="Size" name="size">
+                <input type="number" placeholder="Valuation" name="valuation">
+                <!-- <button type="submit">Submit</button> -->
+                <button type="submit" onclick="submitLandData()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Available Lands for Buy Section -->
+    <section id="available-lands">
+        <h2>Available Lands for Buy</h2>
+        <div class="land-list" id="availableLandList">
+            <!-- Land data will be populated here -->
+        </div>
+    </section>
+
+    <!-- My Land Section -->
+    <section id="my-lands">
+        <h2>My Land</h2>
+        <div class="land-list" id="myLandList">
+            <!-- Land data will be populated here -->
+        </div>
+    </section>
+
+    <!-- Trasnfer land popup -->
+
+
+    <!-- Success Popup -->
+    <div id="successPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('successPopup')">&times;</span>
+            <h2>Success</h2>
+            <p>User registered successfully!</p>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2023 AcreAce. All rights reserved.</p>
+    </footer>
+
+    <script src="popup.js"></script>
+    <script src="fetch-users.js"></script>
+    <script src="add-land.js"></script>
+    <script src="fetch-land.js"></script>
+    <script src="my-land.js"></script>
+
+    <script>
+        // Logout function
+        function logout() {
+            localStorage.clear(); // Clear localStorage, especially if it holds authentication data
+            window.location.href = 'index.html'; // Redirect to index.html
+        }
+    </script>
+</body>
+</html>

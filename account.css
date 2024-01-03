@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black; /* Setting background color to black */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white; /* Setting text color to white for contrast */
+}
+
+/* Container Styles */
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white; /* Text color inside the container */
+    border: white   ;
+    
+}
+
+/* Row and Column Styles */
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background: white; /* Button background color */
+    color: white; /* Button text color */
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+.btn:hover {
+    background: #563434; /* Hover background color */
+}
+
+/* Account Page Styles */
+.account-page {
+    padding: 50px 0;
+    background: radial-gradient(circle, black, black); /* Radial gradient from black */
+}
+.form-container {
+    background: black; /* Background color for form container */
+    color: white; /* Text color inside the form container */
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5); /* Shadow for form container */
+    overflow: hidden;
+    border: 1px solid white; /* Added white border */
+    margin-bottom: 70px;
+    margin-right: 40px;
+}
+.login_form{
+    margin-top: 87px;
+}
+
+.form-container span {
+    font-weight: bold;
+    padding: 0 10px;
+    color: white; /* Text color for form links */
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-container form {
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 70px;
+    transition: transform 1s;
+}
+form input {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    background: #333; /* Input background color */
+    color: white; /* Input text color */
+}
+form .btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    color: black;
+}
+#LoginForm {
+    left: -300px;
+}
+#RegForm {
+    left: 0;
+}
+#Indicator {
+    width: 160px;
+    border: none;
+    background: white; /* Indicator color */
+    height: 3px;
+    margin-top: 8px;
+    position: absolute;
+    bottom: -3px;
+    transform: translateX(300px);
+    transition: transform 1s;
+}
+
+.form-container {
+    /* Existing styles... */
+    padding: 40px 10px; /* Reduced vertical padding */
+}
+
+/* If you have a specific heading class or element, adjust its margin */
+.centered-title {
+    text-align: center; /* Center the text horizontally */
+    font-weight: bold; /* Make the text bold */
+    font-size: 40px; /* Adjust font size as needed */
+    padding-top: 30px;
+}
+
+body, .container {
+    height: auto; /* Adjust to auto or remove the height property */
+    overflow: hidden; /* Temporarily add this to test if it removes the scroll */
+}
+
+.form-btn span {
+    cursor: pointer;
+    color: white; /* Default text color */
+    /* Additional styling can be added here (e.g., padding, margin) */
+}
+
+.form-btn span:hover {
+    color: burlywood; /* Text color changes to blue on hover */
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.popup {
+    position: fixed;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}

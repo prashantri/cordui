@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.container {
+    text-align: center;
+    color: white;
+    position: relative; /* Added for positioning the button */
+}
+.logo {
+    width: 300px;
+    margin-bottom: 20px;
+}
+.bottom-image {
+    width: 300px;
+    margin-top: 20px;
+}
+.start-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: cadetblue;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
